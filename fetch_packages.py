@@ -224,8 +224,8 @@ def ProcessPackage(pkg):
                     print 'mkdirs of ' + _NODE_MODULES + ' ' + _TMP_NODE_MODULES + ' failed.. Exiting..'
                     return
 
-            npmCmd = ['cp', '-af', _TMP_NODE_MODULES + '/' + pkg['name'],
-                      './node_modules/']
+            npmCmd = ['cp', '-af', _TMP_NODE_MODULES + '/',
+                      './']
             if os.path.exists(_TMP_NODE_MODULES + '/' + pkg['name']):
                 cmd = npmCmd
             else:
