@@ -10,6 +10,30 @@
                     zipped file gets extracted and gets copied in current directory
                     If format as npm-cached, then the cache is not built in
                     /tmp/cache, but in node_modules in current directory directly
+
+                    Please Note:
+                        If the third-party npm module is platform dependent, then we
+                        need to create the package based on the platform and
+                        then put it in cache and prepend '$distro' before that tgz
+                        file.
+                        In the md5 section, add platform specific md5
+                        values, also add tag 'other' which specifies if any of
+                        the specified platform does not match, then url gets
+                        stripped off $distro keyword and gets downloaded and md5
+                        value gets checked. Ex:
+                            <package>
+                                <name>my-pkg</name>
+                                <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/$distro/my-pkg-3.8.0.tar.gz</url>
+                                <format>npm-cached</format>
+                                <md5>
+                                    <darwin>1111</darwin>
+                                    <ubuntu>2222</ubuntu>
+                                    <centos>3333</centos>
+                                    <redhat>4444</redhat>
+                                    <other>5555</other>
+                                </md5>
+                            </package>
+
           md5     : md5 checksum to compare, against the md5 checksum of the
                     downloaded file
           rename  : Rename the directory/downloaded file to this.
