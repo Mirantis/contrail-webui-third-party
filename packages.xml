@@ -762,7 +762,7 @@
         <name>node-sass</name>
 	<url>https://github.com/Mirantis/contrail-third-party-cache-fixup/raw/master/node-sass-3.8.0.tar.gz</url>
         <format>npm-cached</format>
-        <md5>i0b3f99146e9d10f4e6d5955828adafd2</md5>
+        <md5>0b3f99146e9d10f4e6d5955828adafd2</md5>
     </package>
     <package>
         <name>bootstrap-sass</name>
