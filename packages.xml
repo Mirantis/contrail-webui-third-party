@@ -776,15 +776,9 @@
     </package>
     <package>
         <name>node-sass</name>
-        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/$distro/node-sass-3.8.0.tar.gz</url>
+	<url>https://github.com/Mirantis/contrail-third-party-cache-fixup/raw/master/node-sass-3.8.0.tar.gz</url>
         <format>npm-cached</format>
-        <md5>
-            <centos>8c9cec94b692148b80d7641fce2071e4</centos>
-            <redhat>78a6ed356f69d05c37c0155338ce1b40</redhat>
-            <darwin>8d8fed0927241aefda7483b0fe647963</darwin>
-            <ubuntu>99564e23992f79a98c623b774be108fb</ubuntu>
-            <other>aa7d6752ed3df559f6bb38e17d76019a</other>
-        </md5>
+        <md5>0b3f99146e9d10f4e6d5955828adafd2</md5>
     </package>
     <package>
         <name>bootstrap-sass</name>
