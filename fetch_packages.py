@@ -242,6 +242,7 @@ def ProcessPackage(pkg):
 
         if pkg.format == 'npm-cached':
             try:
+                print "#REMOVING {0} file".format(ccfile)
                 os.remove(ccfile);
             except OSError as exc:
                 if exc.errno == errno.ENOENT:
@@ -250,7 +251,13 @@ def ProcessPackage(pkg):
                     print 'rmtree of ' + ccfile + ' failed with errno ' + str(exc.errno)
 
     if rename and dest:
-        os.rename(dest, str(rename))
+        if pkg.format == 'npm-cached':
+            src = _NODE_MODULES + '/' + dest
+            target = _NODE_MODULES + '/' + rename
+            print "src={0} - target={1}".format(src, target)
+            os.rename(src, target)
+        else:
+            os.rename(dest, str(rename))
 
     ApplyPatches(pkg)
 
