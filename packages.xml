@@ -711,15 +711,27 @@
     </package>
     <package>
         <name>webworker-threads</name>
-        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/webworker-threads-0.7.4.tar.gz</url>
+        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/$distro/webworker-threads-0.7.4.tar.gz</url>
         <format>npm-cached</format>
-        <md5>0fc35fa2c2e61978a8db3968afd98b4a</md5>
+        <md5>
+            <centos>a98300592e691cd512f385c35935127e</centos>
+            <redhat>9473fef536e3647538520bdf732a7897</redhat>
+            <darwin>c312f65c514eff68f9bbd661beff823f</darwin>
+            <ubuntu>6d675af1d5817285990224526e161452</ubuntu>
+            <other>0fc35fa2c2e61978a8db3968afd98b4a</other>
+        </md5>
     </package>
     <package>
         <name>cassandra-driver</name>
-        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/nodejs-driver-3.0.2.tar.gz</url>
+        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/$distro/nodejs-driver-3.0.2.tar.gz</url>
         <format>npm-cached</format>
-        <md5>4495943888999c3c666debc8466f6243</md5>
+        <md5>
+            <centos>d99f55879f9efc8b081bacfe9e87f569</centos>
+            <redhat>59d93e854914aa7d2cc948b095ca3c9c</redhat>
+            <darwin>fbd13d1977407a76a6e3f7f4a160b475</darwin>
+            <ubuntu>c7e5b81b53450f26b6c5becd059fc94a</ubuntu>
+            <other>4495943888999c3c666debc8466f6243</other>
+        </md5>
     </package>
     <package>
         <name>node-sass</name>
@@ -730,9 +742,15 @@
     </package>
     <package>
         <name>bootstrap-sass</name>
-        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/bootstrap-sass-3.3.6.tar.gz</url>
+        <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/$distro/bootstrap-sass-3.3.6.tar.gz</url>
         <format>npm-cached</format>
-        <md5>146ba506a45c1a79872649eee142a1c4</md5>
+        <md5>
+            <centos>bd92b828dd692e1ede16281570a9e489</centos>
+            <redhat>509284a8657d197bfcc435e63f62082e</redhat>
+            <darwin>9d6571a668dc72146955e298e96faad7</darwin>
+            <ubuntu>d2f4928b76df18d24c4b463f3ce99025</ubuntu>
+            <other>146ba506a45c1a79872649eee142a1c4</other>
+        </md5>
     </package>
     <package>
         <name>jdorn-jsoneditor-0.7.25</name>
