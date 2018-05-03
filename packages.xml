@@ -33,6 +33,7 @@
                                     <other>5555</other>
                                 </md5>
                             </package>
+                    - npm-cached-rebuild - rebuild the bindigs after tar is downloaded and unpacked
 
           md5     : md5 checksum to compare, against the md5 checksum of the
                     downloaded file
@@ -742,7 +743,7 @@
     <package>
         <name>webworker-threads</name>
         <url>https://github.com/Juniper/contrail-third-party-cache/raw/master/contrail-webui/common/npm-sources/$distro/webworker-threads-0.7.4.tar.gz</url>
-        <format>npm-cached</format>
+        <format>npm-cached-rebuild</format>
         <md5>
             <centos>a98300592e691cd512f385c35935127e</centos>
             <redhat>9473fef536e3647538520bdf732a7897</redhat>

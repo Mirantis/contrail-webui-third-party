@@ -261,7 +261,7 @@ def ProcessPackage(pkg):
             cmd.append(str(installArguments))
     elif pkg.format == 'file':
         cmd = ['cp', '-af', ccfile, dest]
-    elif pkg.format == 'npm-cached':
+    elif pkg.format == 'npm-cached' or pkg.format == 'npm-cached-rebuild':
         cmd = _TAR_COMMAND + ['-zxvf', ccfile, '-C', _NODE_MODULES]
     else:
         print 'Unexpected format: %s' % (pkg.format)
@@ -303,7 +303,13 @@ def ProcessPackage(pkg):
         ret = p.wait()
         if ret is not 0:
             sys.exit('Terminating: ProcessPackage with return code: %d' % ret);
-
+        if pkg.format == 'npm-cached-rebuild':
+            cmd_rebuild = ['node-gyp','rebuild','-C', _NODE_MODULES + '/' + pkg['name']]
+            print "Issuing command %s" % (cmd_rebuild)
+            p = subprocess.Popen(cmd_rebuild)
+            ret = p.wait()
+            if ret is not 0:
+                sys.exit('Terminating: ProcessPackage with return code: %d' % ret);
     if rename and dest:
         os.rename(dest, str(rename))
 
