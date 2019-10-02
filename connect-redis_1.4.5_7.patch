@@ -1,0 +1,14 @@
+--- node_modules/connect-redis/lib/connect-redis.js
++++ node_modules/connect-redis/lib/connect-redis.js
+@@ -68,7 +68,11 @@ module.exports = function(connect){
+       });
+     }
+ 
+-    self.client.on('error', function () { self.emit('disconnect'); });
++    self.client.on('error', function (error) {
++      self.emit('error', error);
++
++      self.emit('disconnect');
++    });
+     self.client.on('connect', function () { self.emit('connect'); });
+   };
